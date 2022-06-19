@@ -3,6 +3,8 @@
 //  ModuleDetails
 //
 
+import Foundation
+
 struct LabelValueCellViewModel {
     let label: String
     let value: String

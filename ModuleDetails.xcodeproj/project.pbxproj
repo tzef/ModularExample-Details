@@ -19,26 +19,11 @@
 		C9A7866A283D20F300D9177B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78668283D20F300D9177B /* Observer.swift */; };
 		C9A7866B283D20F300D9177B /* Array+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78669283D20F300D9177B /* Array+Subscript.swift */; };
 		C9A787502854D81E00D9177B /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7874F2854D81E00D9177B /* UITableViewCell+ReuseIdentifier.swift */; };
-		C9A7877E2854DCB100D9177B /* ModuleDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7877D2854DCB100D9177B /* ModuleDesignSystem.framework */; };
-		C9A7877F2854DCB100D9177B /* ModuleDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7877D2854DCB100D9177B /* ModuleDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9A787B32855224B00D9177B /* DetailsCellViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787B22855224B00D9177B /* DetailsCellViewModelMapper.swift */; };
 		C9A787B52855226F00D9177B /* RepositoryDetailsViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787B42855226F00D9177B /* RepositoryDetailsViewModelMapper.swift */; };
 		C9A787C7285E16E500D9177B /* SearchItemDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787C6285E16E500D9177B /* SearchItemDisplaying.swift */; };
+		C9A787D5285ED7CA00D9177B /* ModuleDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = C9A787D4285ED7CA00D9177B /* ModuleDesignSystem */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C9A787802854DCB100D9177B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C9A7877F2854DCB100D9177B /* ModuleDesignSystem.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C9A7856B283A66C400D9177B /* ModuleDetails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModuleDetails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A7877E2854DCB100D9177B /* ModuleDesignSystem.framework in Frameworks */,
+				C9A787D5285ED7CA00D9177B /* ModuleDesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +87,8 @@
 				C9A7856E283A66C400D9177B /* ModuleDetails.h */,
 				C9A7856F283A66C400D9177B /* ModuleDetails.docc */,
 			);
-			path = ModuleDetails;
+			name = ModuleDetails;
+			path = Sources/ModuleDetails;
 			sourceTree = "<group>";
 		};
 		C9A78577283A67E900D9177B /* RepositoryDetails */ = {
@@ -209,13 +195,15 @@
 				C9A78567283A66C400D9177B /* Sources */,
 				C9A78568283A66C400D9177B /* Frameworks */,
 				C9A78569283A66C400D9177B /* Resources */,
-				C9A787802854DCB100D9177B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ModuleDetails;
+			packageProductDependencies = (
+				C9A787D4285ED7CA00D9177B /* ModuleDesignSystem */,
+			);
 			productName = ModuleDetails;
 			productReference = C9A7856B283A66C400D9177B /* ModuleDetails.framework */;
 			productType = "com.apple.product-type.framework";
@@ -243,6 +231,9 @@
 				Base,
 			);
 			mainGroup = C9A78561283A66C400D9177B;
+			packageReferences = (
+				C9A787D3285ED7CA00D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */,
+			);
 			productRefGroup = C9A7856C283A66C400D9177B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -485,6 +476,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9A787D3285ED7CA00D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tzef/ModularExample-DesignSystem.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9A787D4285ED7CA00D9177B /* ModuleDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A787D3285ED7CA00D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */;
+			productName = ModuleDesignSystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9A78562283A66C400D9177B /* Project object */;
 }

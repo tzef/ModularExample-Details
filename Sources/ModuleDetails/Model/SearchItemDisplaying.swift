@@ -3,6 +3,8 @@
 //  ModuleDetails
 //
 
+import Foundation
+
 public protocol SearchItemDisplaying {
     var id: Int { get }
     var name: String { get }

@@ -3,6 +3,8 @@
 //  ModuleDetails
 //
 
+import Foundation
+
 final class SharedDateFormatter {
     static let shared = SharedDateFormatter()
     private init() {}
